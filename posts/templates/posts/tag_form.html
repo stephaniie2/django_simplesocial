@@ -3,10 +3,12 @@
 {% load bootstrap3 %}
 
 {% block post_content %}
-<h4>Create New Post</h4>
-<form method="POST" action="{% url 'posts:create' %}" id="postForm">
+<h4>Create New Tag</h4>
+<form method="POST" action="{% url 'posts:createtag' %}" id="postForm">
 	{% csrf_token %}
 	{% bootstrap_form form %}
 	<input type="submit" value="Post" class="btn btn-primary btn-large">
 </form>
+
+
 {% endblock %}
